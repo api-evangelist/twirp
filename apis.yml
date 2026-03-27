@@ -1,0 +1,44 @@
+aid: twirp
+name: Twirp
+description: >-
+  Twirp is a simple RPC framework built on Protocol Buffers, created by
+  Twitch, that generates routing and serialization code from Protobuf
+  service definitions for Go and other languages.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - SDKs
+  - RPC
+  - Protocol Buffers
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/twirp/refs/heads/main/apis.yml
+created: '2026-03-27'
+modified: '2026-03-27'
+specificationVersion: '0.19'
+apis:
+  - aid: twirp:twirp
+    name: Twirp
+    description: >-
+      Twirp is a simple RPC framework built on Protocol Buffers, created by
+      Twitch, that generates routing and serialization code from Protobuf
+      service definitions for Go and other languages.
+    humanURL: https://twitchtv.github.io/twirp/
+    tags:
+      - SDKs
+      - RPC
+      - Protocol Buffers
+    properties:
+      - type: Documentation
+        url: https://twitchtv.github.io/twirp/docs/intro.html
+      - type: Getting Started
+        url: https://twitchtv.github.io/twirp/docs/install.html
+common:
+  - type: Website
+    url: https://twitchtv.github.io/twirp/
+  - type: Documentation
+    url: https://twitchtv.github.io/twirp/docs/intro.html
+  - type: GitHub Organization
+    url: https://github.com/twitchtv
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
