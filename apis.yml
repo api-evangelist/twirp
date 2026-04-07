@@ -7,9 +7,9 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - SDKs
-  - RPC
   - Protocol Buffers
+  - RPC
+  - SDKs
 url: >-
   https://raw.githubusercontent.com/api-evangelist/twirp/refs/heads/main/apis.yml
 created: '2026-03-27'
@@ -24,9 +24,9 @@ apis:
       service definitions for Go and other languages.
     humanURL: https://twitchtv.github.io/twirp/
     tags:
-      - SDKs
-      - RPC
       - Protocol Buffers
+      - RPC
+      - SDKs
     properties:
       - type: Documentation
         url: https://twitchtv.github.io/twirp/docs/intro.html
