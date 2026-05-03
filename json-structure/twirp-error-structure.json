@@ -1,0 +1,38 @@
+{
+  "name": "TwirpError",
+  "description": "Structure documentation for the Twirp error response format returned by all Twirp services",
+  "type": "object",
+  "fields": [
+    {"name": "code", "type": "string (enum)", "required": true, "description": "Error code string (e.g., not_found, invalid_argument, unauthenticated, internal)"},
+    {"name": "msg", "type": "string", "required": true, "description": "Human-readable error message"},
+    {"name": "meta", "type": "object<string,string>", "required": false, "description": "Optional key-value metadata providing additional context about the error"}
+  ],
+  "errorCodes": [
+    {"code": "canceled", "httpStatus": 408, "description": "Request canceled by the client"},
+    {"code": "unknown", "httpStatus": 500, "description": "Unknown server error"},
+    {"code": "invalid_argument", "httpStatus": 400, "description": "Client provided invalid input"},
+    {"code": "malformed", "httpStatus": 400, "description": "Request body could not be decoded"},
+    {"code": "deadline_exceeded", "httpStatus": 408, "description": "Request timed out"},
+    {"code": "not_found", "httpStatus": 404, "description": "Resource not found"},
+    {"code": "bad_route", "httpStatus": 404, "description": "URL path does not match any service or method"},
+    {"code": "already_exists", "httpStatus": 409, "description": "Resource already exists"},
+    {"code": "permission_denied", "httpStatus": 403, "description": "Client lacks permission"},
+    {"code": "unauthenticated", "httpStatus": 401, "description": "Client is not authenticated"},
+    {"code": "resource_exhausted", "httpStatus": 429, "description": "Rate limit or quota exceeded"},
+    {"code": "failed_precondition", "httpStatus": 412, "description": "Operation rejected due to system state"},
+    {"code": "aborted", "httpStatus": 409, "description": "Operation aborted due to concurrency conflict"},
+    {"code": "out_of_range", "httpStatus": 400, "description": "Value outside valid range"},
+    {"code": "unimplemented", "httpStatus": 501, "description": "Method not implemented"},
+    {"code": "internal", "httpStatus": 500, "description": "Internal server error"},
+    {"code": "unavailable", "httpStatus": 503, "description": "Service temporarily unavailable"},
+    {"code": "data_loss", "httpStatus": 500, "description": "Unrecoverable data loss or corruption"}
+  ],
+  "example": {
+    "code": "not_found",
+    "msg": "the requested resource was not found",
+    "meta": {
+      "resource": "user",
+      "id": "12345"
+    }
+  }
+}

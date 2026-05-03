@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://twitchtv.github.io/twirp/schemas/error.json",
+  "title": "Twirp Error",
+  "description": "The error response format returned by all Twirp services when a request fails. Contains a string error code, human-readable message, and optional metadata.",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "String error code identifying the error type",
+      "enum": [
+        "canceled",
+        "unknown",
+        "invalid_argument",
+        "malformed",
+        "deadline_exceeded",
+        "not_found",
+        "bad_route",
+        "already_exists",
+        "permission_denied",
+        "unauthenticated",
+        "resource_exhausted",
+        "failed_precondition",
+        "aborted",
+        "out_of_range",
+        "unimplemented",
+        "internal",
+        "unavailable",
+        "data_loss",
+        "no_error"
+      ]
+    },
+    "msg": {
+      "type": "string",
+      "description": "Human-readable error message providing additional context"
+    },
+    "meta": {
+      "type": "object",
+      "description": "Optional key-value metadata providing additional error details",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["code", "msg"],
+  "examples": [
+    {
+      "code": "not_found",
+      "msg": "the requested resource was not found"
+    },
+    {
+      "code": "invalid_argument",
+      "msg": "phone number is required",
+      "meta": {
+        "argument": "phone_number"
+      }
+    },
+    {
+      "code": "unauthenticated",
+      "msg": "invalid credentials"
+    }
+  ]
+}

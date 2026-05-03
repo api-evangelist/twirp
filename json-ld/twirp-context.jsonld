@@ -1,0 +1,61 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "twirp": "https://twitchtv.github.io/twirp/schemas/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+
+    "Service": {
+      "@id": "twirp:Service",
+      "@context": {
+        "name": "schema:name",
+        "description": "schema:description",
+        "package": "twirp:protoPackage",
+        "methods": "twirp:rpcMethods"
+      }
+    },
+
+    "Method": {
+      "@id": "twirp:Method",
+      "@context": {
+        "name": "schema:name",
+        "inputType": "twirp:inputMessage",
+        "outputType": "twirp:outputMessage",
+        "httpMethod": "schema:httpMethod"
+      }
+    },
+
+    "TwirpURL": {
+      "@id": "twirp:TwirpURL",
+      "@context": {
+        "baseUri": {
+          "@id": "schema:url",
+          "@type": "@id"
+        },
+        "prefix": "twirp:urlPrefix",
+        "package": "twirp:protoPackage",
+        "service": "twirp:serviceName",
+        "method": "twirp:methodName"
+      }
+    },
+
+    "TwirpError": {
+      "@id": "twirp:Error",
+      "@context": {
+        "code": "twirp:errorCode",
+        "msg": "schema:description",
+        "meta": "twirp:errorMeta"
+      }
+    },
+
+    "ProtoMessage": {
+      "@id": "twirp:ProtoMessage",
+      "@context": {
+        "name": "schema:name",
+        "fields": "twirp:messageFields"
+      }
+    }
+  }
+}
