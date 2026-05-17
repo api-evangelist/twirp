@@ -9,7 +9,7 @@ description: >-
   making debugging easy. Uses HTTP POST for all requests with URLs in the format
   /twirp/[Package].[Service]/[Method]. Protocol version 7 is the current stable
   version. Licensed under Apache 2.0.
-type: Contract
+kind: contract
 access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
@@ -44,7 +44,7 @@ apis:
     properties:
       - type: Documentation
         url: https://twitchtv.github.io/twirp/docs/intro.html
-      - type: Getting Started
+      - type: GettingStarted
         url: https://twitchtv.github.io/twirp/docs/install.html
       - type: GitHub
         url: https://github.com/twitchtv/twirp
@@ -56,9 +56,9 @@ common:
     url: https://twitchtv.github.io/twirp/
   - type: Documentation
     url: https://twitchtv.github.io/twirp/docs/intro.html
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/twitchtv
-  - type: GitHub Repository
+  - type: GitHubRepository
     url: https://github.com/twitchtv/twirp
   - type: Wire Protocol
     url: https://github.com/twitchtv/twirp/blob/main/PROTOCOL.md
