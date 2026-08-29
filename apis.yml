@@ -11,6 +11,17 @@ description: >-
   version. Licensed under Apache 2.0.
 kind: contract
 access: 3rd-Party
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
@@ -71,6 +82,10 @@ apis:
         url: https://github.com/twitchtv/twirp/blob/main/PROTOCOL.md
 
 common:
+  - type: IssueTracker
+    url: https://github.com/twitchtv/twirp/issues
+  - type: Releases
+    url: https://github.com/twitchtv/twirp/releases
   - type: Website
     url: https://twitchtv.github.io/twirp/
   - type: Documentation
