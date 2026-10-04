@@ -12,15 +12,20 @@ description: >-
 kind: contract
 access: 3rd-Party
 deliveryModel:
-  model: unknown
-  open_source: unknown
+  model: self-hosted
+  license: Apache-2.0
+  license_evidence:
+    repo: twitchtv/twirp
+    spdx: Apache-2.0
+    stars: 7530
+  open_source: true
   commercial: false
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
-  confidence: low
+  label: Self-hosted open source · you run it yourself
+  confidence: medium
   source:
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-license
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -40,7 +45,7 @@ tags:
   - RPC
   - Go
   - SDK
-  - Open-Source
+  - Open Source
   - Protobuf
 tags_raw:
   - Protocol Buffers
@@ -49,6 +54,7 @@ tags_raw:
   - SDKs
   - Open Source
   - Protobuf
+  - Open-Source
 created: '2026-03-27'
 modified: '2026-05-03'
 url: https://raw.githubusercontent.com/api-evangelist/twirp/refs/heads/main/apis.yml
@@ -65,7 +71,6 @@ apis:
       and JSON encoding (Content-Type: application/json). Includes a Go runtime
       and protoc-gen-twirp code generator plugin.
     humanURL: https://twitchtv.github.io/twirp/
-    baseURL: https://twitchtv.github.io/twirp/
     tags:
       - Protocol Buffers
       - RPC
