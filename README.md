@@ -64,62 +64,127 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Twirp is a simple RPC framework built on Protocol Buffers, created by Twitch, that generates routing and serialization code from Protobuf service definitions for Go and other languages. Similar to gRPC but runs on the standard library's net/http server without custom transport implementations.
+Twirp is a simple RPC framework built on Protocol Buffers, created by Twitch, that generates routing and serialization code from Protobuf service definitions for Go and other languages. Similar to gRPC but runs on the standard library's net/http Server without custom HTTP server or transport implementations. Supports both binary Protobuf and JSON serialization, making debugging easy. Uses HTTP POST for all requests with URLs in the format /twirp/[Package].[Service]/[Method]. Protocol version 7 is the current stable version. Licensed under Apache 2.0.
 
-**Type:** Company (Open Source)  
-**License:** Apache 2.0  
-**Modified:** 2026-05-03
+**Areas:** Protocol Buffers · RPC · Go · SDK · Open Source · Protobuf
 
-## Framework
+## Twirp on APIs.io
 
-### Twirp RPC Framework
-Define your service in a .proto file and Twirp generates servers and clients implementing the Twirp wire protocol over HTTP. Uses POST requests with URLs in the form /twirp/[Package].[Service]/[Method]. Supports both Protobuf binary and JSON encoding.
+Everything profiled for Twirp is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/twirp/](https://apis.io/providers/twirp/)** — or go straight to one of the APIs or properties below.
 
-**Human URL:** [https://twitchtv.github.io/twirp/](https://twitchtv.github.io/twirp/)
+### APIs (1)
 
-#### Tags
+- [Twirp RPC Framework](https://apis.io/apis/twirp/twirp-framework/) — Twirp is a simple RPC framework with protobuf service definitions. Define your service in a .proto file and Twirp generates servers and clients implementing…
 
-Protocol Buffers, RPC, Go, Code Generation
+### Published properties
 
-#### Properties
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- [Documentation](https://twitchtv.github.io/twirp/docs/intro.html)
-- [Getting Started](https://twitchtv.github.io/twirp/docs/install.html)
-- [GitHub](https://github.com/twitchtv/twirp)
-- [Wire Protocol](https://github.com/twitchtv/twirp/blob/main/PROTOCOL.md)
+#### JSON Schema (1)
 
-## Artifacts
+The data models the API reads and writes.
 
-### JSON Schemas
+- [Twirp Error](https://apis.io/schemas/twirp/twirp-error/)
 
-- [Twirp Error Schema](json-schema/twirp-error-schema.json)
+#### JSON Structure (1)
 
-### JSON Structures
+Data models expressed in JSON Structure.
 
-- [Twirp Error Structure](json-structure/twirp-error-structure.json)
+- [Twirp Error Structure](https://apis.io/json-structure/twirp/twirp-error-structure/)
 
-### JSON-LD
+#### JSON-LD (1)
 
-- [Twirp Context](json-ld/twirp-context.jsonld)
+Linked-data contexts for the provider's vocabulary.
 
-### Vocabulary
+- [Twirp Context](https://apis.io/jsonld/twirp/twirp-context/)
 
-- [Twirp Vocabulary](vocabulary/twirp-vocabulary.yml)
+#### Vocabulary (1)
 
-## Common Properties
+The provider's domain terms, defined.
+
+- [Twirp Vocabulary](https://apis.io/vocabularies/twirp/twirp-vocabulary/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Twirp — jsonschema rules](https://apis.io/rules/twirp/twirp-jsonschema-spectral-rules/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Twirp Plans Pricing](https://apis.io/plans/twirp/twirp-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Twirp Rate Limits](https://apis.io/rate-limits/twirp/twirp-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Twirp Finops](https://apis.io/finops/twirp/twirp-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://twitchtv.github.io/twirp/)
 - [Documentation](https://twitchtv.github.io/twirp/docs/intro.html)
-- [GitHub Organization](https://github.com/twitchtv)
-- [GitHub Repository](https://github.com/twitchtv/twirp)
-- [Wire Protocol](https://github.com/twitchtv/twirp/blob/main/PROTOCOL.md)
-- [License](https://github.com/twitchtv/twirp/blob/main/LICENSE)
+- [GitHub](https://github.com/twitchtv)
 
-## Tags
+## API Evangelist rating
 
-Protocol Buffers, RPC, Go, SDKs, Open Source, Protobuf
+**Kin Score 21.0** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 6.7 |
+| Contract governance | 23.5 |
+| Operational transparency | 26.3 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 7.9 |
 
-**FN:** Kin Lane  
-**Email:** kin@apievangelist.com
+**Agent readiness 0.6** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/twirp/](https://apis.io/providers/twirp/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Twirp: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/twirp/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
